@@ -1,4 +1,12 @@
-**Z9n.ai** wird ausgesprochen wie *«Znüni näh»* – Berndeutsch für «eine kurze Pause am Morgen».
+**Z9n.ai** – ausgesprochen _„Znüninäh"_ – ist Schweizerdeutsch und stammt aus einem Lied der Berner Kultband Stiller Has.
 
-Der Name ist inspiriert vom gleichnamigen Lied der Schweizer Band [Stiller Has](https://www.stillerhas.ch). Darin geht es um einen Fertigungs-Prozess 
+Im Lied erklärt ein Meister seinem Team wie der Fertigungsprozess funktioniert: Rollen anbringen, alles richtig positionieren – und dann? Einfach laufen lassen. Nichts dran machen.
+Und Znüni näh – Pause machen, weil die Maschine die Arbeit erledigt.
 
+Genau das ist unsere Philosophie.
+
+Wir automatisieren und integrieren deine Geschäftsprozesse mit BPMN und KI – damit deine Systeme laufen, ohne dass jemand ständig eingreifen muss. _„S geit alles mit em Computer, he"_ – und heute erst recht mit künstlicher Intelligenz. Wir automatisieren nicht nur deine Prozesse, sondern entwickeln massgeschneiderte Software, wo es bis vor kurzem noch ganze Teams brauchte.
+
+_"Stelle u nid lege. La loufe, he, eifach la loufe."_
+
+Und du? Kannst Znüni näh. ☕
