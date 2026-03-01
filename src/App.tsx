@@ -17,6 +17,7 @@ import logoImage from './images/logo_Z9nai.png';
 import heroMd from './content/hero.md?raw';
 import visionMd from './content/home.md?raw';
 import technologieMd from './content/technologie.md?raw';
+import nameMd from './content/name.md?raw';
 
 // Parst technologie.md: ## Titel\nBeschreibung → Array von { title, desc }
 function parseTechCards(md: string): { title: string; desc: string }[] {
@@ -30,7 +31,7 @@ function parseTechCards(md: string): { title: string; desc: string }[] {
 }
 
 const Logo = ({ className = "w-8 h-8" }: { className?: string }) => (
-  <img src={logoImage} alt="Z9n.ai logo" className={`${className}`} />
+  <img src={logoImage} alt="Z9n.ai GmbH logo" className={`${className}`} />
 );
 
 const Header = () => (
@@ -38,7 +39,7 @@ const Header = () => (
     <div className="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
       <div className="flex items-center gap-3 group cursor-pointer">
         <Logo className="w-10 h-10" />
-        <span className="font-mono font-bold text-xl tracking-tighter text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-emerald-400 group-hover:to-pink-500 transition-all">Z9n.ai</span>
+        <span className="font-mono font-bold text-xl tracking-tighter text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-emerald-400 group-hover:to-pink-500 transition-all">Z9n.ai GmbH</span>
       </div>
       <nav className="hidden md:flex items-center gap-6">
         <a href="#vision" className="text-xs font-mono text-white/60 hover:text-white transition-colors uppercase tracking-widest">Vision</a>
@@ -110,7 +111,7 @@ export default function App() {
                 <div className="text-[10px] font-mono uppercase tracking-[0.3em] text-white/40 mb-4">01 // Vision</div>
                 <h2 className="text-2xl font-bold text-white mb-4">Die autonome Grenze</h2>
                 <p className="text-sm text-white/60 leading-relaxed font-mono">
-                  Wir sind überzeugt, dass Intelligenz dort wirken sollte, wo die Aktion stattfindet. Z9n.ai bringt übergeordnetes Denken direkt an die Grenze.
+                  Wir sind überzeugt, dass Intelligenz dort wirken sollte, wo die Aktion stattfindet. Z9n.ai GmbH bringt übergeordnetes Denken direkt an die Grenze.
                 </p>
               </div>
              
@@ -147,7 +148,7 @@ export default function App() {
           <div>
             <div className="flex items-center gap-3 mb-6">
               <Logo className="w-8 h-8" />
-              <span className="font-mono font-bold text-sm tracking-tighter text-white">Z9n.ai</span>
+              <span className="font-mono font-bold text-sm tracking-tighter text-white">Z9n.ai GmbH</span>
             </div>
             <p className="text-xs text-white/40 font-mono max-w-xs leading-relaxed">
               Die autonome Zukunft gestalten. <br />
@@ -173,8 +174,14 @@ export default function App() {
             </div>
           </div>
         </div>
-        <div className="max-w-5xl mx-auto mt-20 pt-8 border-t border-white/5 flex justify-between items-center">
-          <div className="text-[10px] font-mono text-white/20 tracking-widest">© 2026 Z9n.ai // Alle Rechte vorbehalten</div>
+        <div className="max-w-5xl mx-auto mt-16 p-6 rounded border border-white/10 bg-white/[0.02]">
+          <div className="text-[10px] font-mono uppercase tracking-widest text-white/40 mb-3">// Der Name</div>
+          <div className="markdown-body prose prose-invert max-w-none">
+            <Markdown remarkPlugins={[remarkGfm]}>{nameMd}</Markdown>
+          </div>
+        </div>
+        <div className="max-w-5xl mx-auto mt-8 pt-8 border-t border-white/5 flex justify-between items-center">
+          <div className="text-[10px] font-mono text-white/20 tracking-widest">© 2026 Z9n.ai GmbH // Alle Rechte vorbehalten</div>
           <div className="flex gap-4">
             <Globe className="w-4 h-4 text-white/20" />
             <Mail className="w-4 h-4 text-white/20" />
