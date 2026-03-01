@@ -86,9 +86,19 @@ const Hero = () => (
           {heroMd.trim()}
         </p>
         <div className="flex gap-4">
-          <button className="bg-white text-black px-6 py-3 rounded font-mono font-bold uppercase flex items-center gap-2 hover:bg-white/80 transition-all group">
+          <a
+            href="https://pme123.github.io/orchescala/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-white text-black px-6 py-3 rounded font-mono font-bold uppercase flex items-center gap-2 hover:bg-white/80 transition-all group"
+          >
+            <img
+              src="https://raw.githubusercontent.com/pme123/orchescala/master/00-docs/src/docs/images/orchescala_icon.png"
+              alt="Orchescala"
+              className="w-5 h-5 object-contain"
+            />
             Orchescala <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-          </button>
+          </a>
         </div>
       </motion.div>
     </div>
