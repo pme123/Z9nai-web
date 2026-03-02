@@ -85,7 +85,7 @@ Wir verwenden _**Scala 3**_ für alles, außer der Prozessspezifikation (BPMN).
 Geschäftsprozesse sind das Herzstück jedes Unternehmens –
 doch oft sind sie fragmentiert, manuell und schwer zu überblicken.
 
-Z9n.ai steht für **Domain Driven Process Orchestration**:
+Z9nAI steht für **Domain Driven Process Orchestration**:
 Wir nutzen dein **Domain Model** als zentrale Sprache –
 zwischen Business, Entwicklung und Technologie.
 

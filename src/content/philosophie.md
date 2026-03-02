@@ -4,6 +4,7 @@ Wir unterstützen unsere Kunden bei der Prozessdigitalisierung mit Fokus auf
  - BPMN
  - Individuelle Prozesse
  - Künstlicher Intelligenz
+ - Typsichere DSLs (Domain Specific Languages)
 
 ### Warum Domain Driven Process Orchestration?
 
@@ -53,6 +54,12 @@ Die klassische Softwareentwicklung ist oft langsam und starr. Wir nutzen Künstl
 - **Schneller zur Lösung**: KI unterstützt bei der Analyse von Anforderungen und der automatisierten Code-Generierung
 - **Präzise Anpassung**: Maßgeschneiderte Lösungen, die genau auf Ihre Domäne zugeschnitten sind
 - **Kontinuierliche Verbesserung**: Intelligente Systeme lernen und optimieren sich selbst
+
+### Warum Typsichere DSLs (Domain Specific Languages)?
+Typsichere DSLs helfen uns:
+- Prozesse einfach zu beschreiben.
+- KI gute Leitplanken zu geben.
+- Dokumentation und Simulationen einfach zu erstellen.
 
 ---
 ###
