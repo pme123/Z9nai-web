@@ -6,11 +6,12 @@ import { Globe, Mail, ChevronRight, Activity } from 'lucide-react';
 import logoImage from './images/logo_white.png';
 import logoHase from './images/logo.png';
 import orchescalaIcon from './images/orchescala_icon.png';
+import portraitHobby from './images/portrait_hobby.png';
 import heroMd from './content/hero.md?raw';
 import konzepteMd from './content/konzepte.md?raw';
 import orchescalaMd from './content/orchescala.md?raw';
 import servicesMd from './content/services.md?raw';
-import kontaktMd from './content/kontakt.md?raw';
+import firmaMd from './content/firma.md?raw';
 import nameMd from './content/name.md?raw';
 
 const Logo = ({ className = "w-8 h-8" }: { className?: string }) => {
@@ -28,6 +29,7 @@ const Logo = ({ className = "w-8 h-8" }: { className?: string }) => {
 
 const imageMap: { [key: string]: string } = {
   'orchescala_icon.png': orchescalaIcon,
+  'portrait_hobby.png': portraitHobby,
 };
 
 const ContentSection = ({ id, index, label, content, alternate = false }: {
@@ -91,7 +93,7 @@ const Header = () => (
         <a href="#konzepte" className="text-xs font-mono text-white/60 hover:text-white transition-colors uppercase tracking-widest">Konzepte</a>
         <a href="#orchescala" className="text-xs font-mono text-white/60 hover:text-white transition-colors uppercase tracking-widest">Orchescala</a>
         <a href="#services" className="text-xs font-mono text-white/60 hover:text-white transition-colors uppercase tracking-widest">Services</a>
-        <a href="#contact" className="text-xs font-mono text-white/60 hover:text-white transition-colors uppercase tracking-widest">Kontakt</a>
+        <a href="#contact" className="text-xs font-mono text-white/60 hover:text-white transition-colors uppercase tracking-widest">Firma</a>
       </nav>
       <div className="flex items-center gap-4">
       </div>
@@ -143,7 +145,7 @@ export default function App() {
         <ContentSection id="konzepte" index="01" label="Konzepte" content={konzepteMd} />
         <ContentSection id="orchescala"  index="02" label="Orchescala"  content={orchescalaMd} />
         <ContentSection id="services"    index="03" label="Services"    content={servicesMd} alternate />
-        <ContentSection id="contact"     index="04" label="Kontakt"     content={kontaktMd} />
+        <ContentSection id="contact"     index="04" label="Firma"     content={firmaMd} />
       </main>
 
       <footer className="py-16 px-6 border-t border-white/10">
