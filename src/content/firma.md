@@ -57,12 +57,11 @@ Wir freuen uns auf deine Nachricht.
 >
 >_.. der Software-Engineer leitet seine Agenten an und überwacht deren Arbeit .._
 >
->KI wird enorme Möglichkeiten für Firmen bieten, welche flexible auf die neusten Entwicklungen reagieren können.
-> ###
-> 
->_„S geit alles mit em Computer, he"_ – wir automatisieren nicht nur deine Prozesse, sondern entwickeln massgeschneiderte Software, wo es bis vor kurzem noch ganze Teams brauchte.
->
->_"Stelle u nid lege. La loufe, he, eifach la loufe."_
+>KI wird enorme Möglichkeiten bieten für Firmen, welche flexible auf die neusten Entwicklungen reagieren können.
+> <br><br>
+> _„S geit alles mit em Computer, he"_ – wir automatisieren nicht nur deine Prozesse, sondern entwickeln massgeschneiderte Software, wo es bis vor kurzem noch ganze Teams brauchte.
+>_<br><br>
+> "Stelle u nid lege. La loufe, he, eifach la loufe."_
 >
 >Und du? Chasch Znüni näh. 😉☕
 

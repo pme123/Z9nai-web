@@ -14,7 +14,6 @@ import konzepteMd from './content/konzepte.md?raw';
 import orchescalaMd from './content/orchescala.md?raw';
 import servicesMd from './content/services.md?raw';
 import firmaMd from './content/firma.md?raw';
-import nameMd from './content/name.md?raw';
 import cvPdf from './files/cv_pascal.mengelt.pdf?url';
 
 const Logo = ({ className = "w-8 h-8" }: { className?: string }) => {
@@ -192,21 +191,13 @@ export default function App() {
 
       <footer className="py-16 px-6 border-t border-white/10">
         <div className="max-w-5xl mx-auto">
-          <div className="flex items-center gap-3 mb-6">
-            <Logo className="w-8 h-8" />
-            <span className="font-mono font-bold text-sm tracking-tighter text-white">Z9nAI GmbH</span>
-          </div>
-          <div className="p-6 rounded border border-white/10 bg-white/[0.02] mb-8">
-            <div className="text-[10px] font-mono uppercase tracking-widest text-white/40 mb-3">// Der Name</div>
-            <div className="markdown-body prose prose-invert max-w-none">
-              <Markdown remarkPlugins={[remarkGfm]}>{nameMd}</Markdown>
-            </div>
-          </div>
+
+
           <div className="pt-8 border-t border-white/5 flex justify-between items-center">
             <div className="text-[10px] font-mono text-white/20 tracking-widest">© 2026 Z9nAI GmbH // Alle Rechte vorbehalten</div>
             <div className="flex gap-4">
               <Globe className="w-4 h-4 text-white/20" />
-              <Mail className="w-4 h-4 text-white/20" />
+              <Mail className="w-4 h-4 text-white/20" onClick={() => window.location.href = 'mailto:hallo@z9n.ai'} />
             </div>
           </div>
         </div>
