@@ -17,6 +17,6 @@ Wir haben viel Erfahrung in:
 Wir stehen hinter _Orchescala_ und freuen uns, 
 dich mit dieser Lösung zu begeistern.
 
-So garantieren wir regelmässige Updates und spannende neue Funktionen. 
+So garantieren wir professionellen Support, regelmässige Updates und spannende neue Funktionen. 
 
  
