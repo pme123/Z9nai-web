@@ -9,10 +9,11 @@ _Pascal Mengelt, Gründer von Z9nAI_
 Wir möchten Kunden Software Ingenieure anbieten, 
 welche ein Projekt von A-Z erfolgreich durchziehen können.
 
-Im Moment bin ich noch alleine unterwegs. 
-So wenn du unsere Konzepte spannend findest, freuen wir uns auf einen Austausch.
+---
+###
 
 <div style="text-align:center">
+
 
 **Pascal Mengelt**
 
@@ -26,12 +27,19 @@ Gründer & Software Ingenieur
 Pascal bringt über 20 Jahre Erfahrung in Software Engineering mit.
 architektur, Prozessorchestrierung und domänengetriebenem Design mit. Er ist Autor von _Orchescala_ und treibt die Vision von KI-gestützter Prozessautomatisierung voran.
 
+--- 
+
+Im Moment bin ich noch alleine unterwegs.
+Wenn du unsere Konzepte spannend findest, würde ich mich auf einen Austausch freuen.
+Sei es als Partner, als Teil von Z9nAI oder natürlichals Kunde.
+
 ---
 
 ### Kontakt aufnehmen
 
-Interesse an einer Zusammenarbeit oder Fragen zu unseren Services? Wir freuen uns auf deine Nachricht.
+Interesse an einer Zusammenarbeit oder Fragen zu unseren Services? 
+Wir freuen uns auf deine Nachricht.
 
-📧 [hello@z9n.ai](mailto:hello@z9n.ai)
+📧 [hallo@z9n.ai](mailto:hallo@z9n.ai)
 
 
