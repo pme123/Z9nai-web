@@ -12,9 +12,15 @@ welche ein Projekt von A-Z erfolgreich durchziehen können.
 Im Moment bin ich noch alleine unterwegs. 
 So wenn du unsere Konzepte spannend findest, freuen wir uns auf einen Austausch.
 
-**Pascal Mengelt** – Gründer & Software Ingenieur
+<div style="text-align:center">
+
+**Pascal Mengelt**
+
+Gründer & Software Ingenieur
 
 ![Pascal Mengelt](../images/portrait.png "hover:portrait_hobby.png")
+
+</div>
 
 
 Pascal bringt über 20 Jahre Erfahrung in Software Engineering mit.

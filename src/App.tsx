@@ -1,6 +1,7 @@
 import React from 'react';
 import Markdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
+import rehypeRaw from 'rehype-raw';
 import { motion } from 'motion/react';
 import { Globe, Mail, ChevronRight, Activity } from 'lucide-react';
 import logoImage from './images/logo_white.png';
@@ -85,7 +86,7 @@ const ContentSection = ({ id, index, label, content, alternate = false }: {
         </div>
         <article className="markdown-body prose prose-invert max-w-none">
           <div className="p-8 md:p-12 rounded-2xl border border-white/10 bg-white/[0.02] backdrop-blur-sm">
-            <Markdown remarkPlugins={[remarkGfm]} components={markdownComponents}>{content}</Markdown>
+            <Markdown remarkPlugins={[remarkGfm]} rehypePlugins={[rehypeRaw]} components={markdownComponents}>{content}</Markdown>
           </div>
         </article>
         {id === 'orchescala' && (
@@ -149,7 +150,7 @@ const Hero = () => (
           <span className="text-white/40 italic">Powered</span>
         </h1>
         <div className="markdown-body prose prose-invert max-w-xl mb-10">
-          <Markdown remarkPlugins={[remarkGfm]}>{heroMd}</Markdown>
+          <Markdown remarkPlugins={[remarkGfm]} rehypePlugins={[rehypeRaw]}>{heroMd}</Markdown>
         </div>
         <div className="flex items-center gap-4 mb-8">
                   <Logo className="w-16 h-16" />
