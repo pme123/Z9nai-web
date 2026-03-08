@@ -9,7 +9,10 @@ _Das Hauptziel von **Orchescala** ist, deine **Domäne** so viel wie möglich in
 _Definiere die **Domäne** und die **Prozesse** -> **Orchescala** erledigt den Rest._
 
 Orchescala ist Open Source – transparent, auditierbar und frei von Vendor Lock-in.
-Du behältst die volle Kontrolle über deine Prozessautomation.
+Du behältst die volle Kontrolle über deine Domäne und Prozesse.
+
+_Durch die Trennung von Businesslogik und Technologie, können wir zum Beispiel die gleichen Service Integrationen 
+über verschiedene BPMN Engines nutzen._
 
 Mehr Informationen findest du auf [Orchescala](https://pme123.github.io/orchescala/).
 Oder direkt im Source Code auf [GitHub](https://github.com/pme123/orchescala).

@@ -1,13 +1,13 @@
-Wir unterstützen unsere Kunden bei der Prozessdigitalisierung mit Fokus auf
+Wir unterstützen unsere Kunden bei der Prozessorchestrierung mit Fokus auf
  - Domain Driven Process Orchestration 
  - BPMN
  - Individuelle Prozesse
  - Künstlicher Intelligenz
- - Typsichere DSLs (Domain Specific Languages)
+ - Typsicheren DSLs (Domain Specific Languages)
 
 ### Warum Domain Driven Process Orchestration?
 
-Mit **Orchescala** haben wir eine umfassende Toolbox entwickelt, die alle notwendigen Werkzeuge für moderne Prozessdigitalisierung bereitstellt:
+Dieser Ansatz unterstützt unsere Kern Konzepte perfekt:
 
 - **Kollaborative Umsetzung**: Teams arbeiten nahtlos zusammen in einem iterative Zyklus von Spezifikation > Umsetzung > Dokumentation > Spez..
 - **Wiederverwendbarkeit**: Prozesskomponenten und Module können wir über Projekte hinweg wiederverwenden
@@ -17,6 +17,8 @@ Mit **Orchescala** haben wir eine umfassende Toolbox entwickelt, die alle notwen
 - **API Spezifikationen für Prozessinteraktionen**: Die generierten OpenAPI Spezifikationen können Clients direkt verwenden
 - **KI unterstützte Umsetzung**: Die Unterstützung mit KI beschleunigt die Entwicklung massiv
 - **'Low-Code' Integration für die Modellierung**: Bei der Modellierung können wir direkt alles mit Bausteinen verwenden
+
+Mit **Orchescala** haben wir eine umfassende Toolbox entwickelt, die alle notwendigen Werkzeuge für moderne Prozessdigitalisierung bereitstellt.
 
 ### Warum BPMN?
 
@@ -35,7 +37,8 @@ Mit BPMN schaffen wir klare, wartbare und skalierbare Prozesslandschaften für d
 ### Warum individuelle Prozesse?
 
 Jedes Unternehmen ist einzigartig – deine Prozesse sollten das widerspiegeln.
-Standardlösungen passen selten perfekt und führen zu einer heterogenen und komplexen IT-Landschaft, welche enorm schwierig ist zu warten und zu skalieren.
+Standardlösungen passen selten perfekt und führen zu einer heterogenen und komplexen IT-Landschaft, 
+welche enorm schwierig ist zu warten und zu skalieren.
 Wir bauen individuelle Prozesse, die exakt zu deiner Domäne und deinen Anforderungen passen:
 
 - **Wettbewerbsvorteil**: Individuelle Prozesse, die deine spezifischen Stärken nutzen und deine Konkurrenz abhängen
@@ -48,15 +51,16 @@ Mit individuellen Prozessen transformierst du deine Geschäftslogik direkt in di
 
 ### Warum KI-getriebene Entwicklung?
 
-Die klassische Softwareentwicklung ist oft langsam und starr. Wir nutzen Künstliche Intelligenz, um den Entwicklungsprozess zu revolutionieren:
+Die klassische Softwareentwicklung ist oft langsam, starr und teuer. Wir nutzen Künstliche Intelligenz, um den Entwicklungsprozess zu revolutionieren:
 
-- **Schneller zur Lösung**: KI unterstützt bei der Analyse von Anforderungen und der automatisierten Code-Generierung
-- **Präzise Anpassung**: Maßgeschneiderte Lösungen, die genau auf deine Domäne zugeschnitten sind
-- **Kontinuierliche Verbesserung**: Intelligente Systeme lernen und optimieren sich selbst
+- **Schneller zur Lösung**: Von der Analyse über die Implementierung bis zum Betrieb
+- **Präzise Anpassung**: Maßgeschneiderte Lösungen, die genau auf deine Domäne zugeschnitten sind.
+- **Kontinuierliche Verbesserung**: KI hilft uns die verschiedensten Projekte auf dem neusten Stand zu halten > Refactoring.
 
 ### Warum Typsichere DSLs (Domain Specific Languages)?
 Typsichere DSLs helfen uns:
 - Prozesse einfach zu beschreiben.
+- Abstraktionsebene zwischen Domäne und Technologie zu schaffen.
 - KI gute Leitplanken zu geben.
 - Dokumentation und Simulationen einfach zu erstellen.
 

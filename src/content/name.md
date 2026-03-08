@@ -8,7 +8,7 @@ _.. der Software-Engineer seine Agenten anleitet und deren Arbeit überwacht .._
 Im Lied erklärt ein Meister seinem Team wie der Fertigungsprozess funktioniert: Rollen anbringen, alles richtig positionieren – und dann? Einfach laufen lassen. Nichts dran machen.
 Und Znüni näh – Pause machen, weil die Maschine die Arbeit erledigt.
 
-Genau das ist unsere Philosophie.
+Genau das ist unsere Konzepte.
 
 Wir automatisieren und integrieren deine Geschäftsprozesse mit BPMN und KI – damit deine Systeme laufen, ohne dass jemand ständig eingreifen muss. 
 _„S geit alles mit em Computer, he"_ – und heute erst recht mit künstlicher Intelligenz. 

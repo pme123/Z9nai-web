@@ -7,7 +7,7 @@ import logoImage from './images/logo_white.png';
 import logoHase from './images/logo.png';
 import orchescalaIcon from './images/orchescala_icon.png';
 import heroMd from './content/hero.md?raw';
-import philosophieMd from './content/philosophie.md?raw';
+import konzepteMd from './content/konzepte.md?raw';
 import orchescalaMd from './content/orchescala.md?raw';
 import servicesMd from './content/services.md?raw';
 import kontaktMd from './content/kontakt.md?raw';
@@ -88,7 +88,7 @@ const Header = () => (
         <span className="font-mono font-bold text-xl tracking-tighter text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-emerald-400 group-hover:to-pink-500 transition-all">Z9nAI</span>
       </a>
       <nav className="hidden md:flex items-center gap-6">
-        <a href="#philosophie" className="text-xs font-mono text-white/60 hover:text-white transition-colors uppercase tracking-widest">Philosophie</a>
+        <a href="#konzepte" className="text-xs font-mono text-white/60 hover:text-white transition-colors uppercase tracking-widest">Konzepte</a>
         <a href="#orchescala" className="text-xs font-mono text-white/60 hover:text-white transition-colors uppercase tracking-widest">Orchescala</a>
         <a href="#services" className="text-xs font-mono text-white/60 hover:text-white transition-colors uppercase tracking-widest">Services</a>
         <a href="#contact" className="text-xs font-mono text-white/60 hover:text-white transition-colors uppercase tracking-widest">Kontakt</a>
@@ -140,7 +140,7 @@ export default function App() {
 
       <main>
         <Hero />
-        <ContentSection id="philosophie" index="01" label="Philosophie" content={philosophieMd} />
+        <ContentSection id="konzepte" index="01" label="Konzepte" content={konzepteMd} />
         <ContentSection id="orchescala"  index="02" label="Orchescala"  content={orchescalaMd} />
         <ContentSection id="services"    index="03" label="Services"    content={servicesMd} alternate />
         <ContentSection id="contact"     index="04" label="Kontakt"     content={kontaktMd} />
