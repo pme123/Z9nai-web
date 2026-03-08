@@ -1,6 +1,6 @@
-Wir unterstützen unsere Kunden bei der Prozessorchestrierung mit Fokus auf
+Wir unterstützen unsere Kunden bei der Prozess Orchestrierung mit Fokus auf
  - Domain Driven Process Orchestration 
- - BPMN
+ - BPMN / DMN
  - Individuelle Prozesse
  - Künstlicher Intelligenz
  - Typsicheren DSLs (Domain Specific Languages)
@@ -9,16 +9,16 @@ Wir unterstützen unsere Kunden bei der Prozessorchestrierung mit Fokus auf
 
 Dieser Ansatz unterstützt unsere Kern Konzepte perfekt:
 
+![Kollaborative Umsetzung](../images/orchescala_icon.png)
 - **Kollaborative Umsetzung**: Teams arbeiten nahtlos zusammen in einem iterative Zyklus von Spezifikation > Umsetzung > Dokumentation > Spez..
-- **Wiederverwendbarkeit**: Prozesskomponenten und Module können wir über Projekte hinweg wiederverwenden
+- **Wiederverwendbarkeit**: Prozesskomponenten und Module können wir über Projekte und Kunden hinweg wiederverwenden
 - **Wartbarkeit**: Klare Strukturen und Standards machen Systeme einfach zu warten und zu erweitern
 - **Dokumentierte Prozessinteraktionen**: Jede Interaktion ist automatisch dokumentiert
 - **Simulierte Prozesspfade**: Die Prozesspfade können wir einfach simulieren
 - **API Spezifikationen für Prozessinteraktionen**: Die generierten OpenAPI Spezifikationen können Clients direkt verwenden
-- **KI unterstützte Umsetzung**: Die Unterstützung mit KI beschleunigt die Entwicklung massiv
 - **'Low-Code' Integration für die Modellierung**: Bei der Modellierung können wir direkt alles mit Bausteinen verwenden
 
-Mit **Orchescala** haben wir eine umfassende Toolbox entwickelt, die alle notwendigen Werkzeuge für moderne Prozessdigitalisierung bereitstellt.
+Mit **Orchescala** haben wir eine umfassende Toolbox entwickelt, die alle notwendigen Werkzeuge für moderne Prozess Orchestrierung bereitstellt.
 
 ### Warum BPMN?
 
@@ -53,7 +53,8 @@ Mit individuellen Prozessen transformierst du deine Geschäftslogik direkt in di
 
 Die klassische Softwareentwicklung ist oft langsam, starr und teuer. Wir nutzen Künstliche Intelligenz, um den Entwicklungsprozess zu revolutionieren:
 
-- **Schneller zur Lösung**: Von der Analyse über die Implementierung bis zum Betrieb
+- **Schneller zur Lösung**: Von der Analyse über die Implementierung bis zum Betrieb. Die Unterstützung mit KI beschleunigt die Entwicklung steigert massiv.
+- **Mehr Qualität**: Weniger Fehler, bessere Dokumentation, bessere Tests, bessere Audits.
 - **Präzise Anpassung**: Maßgeschneiderte Lösungen, die genau auf deine Domäne zugeschnitten sind.
 - **Kontinuierliche Verbesserung**: KI hilft uns die verschiedensten Projekte auf dem neusten Stand zu halten > Refactoring.
 

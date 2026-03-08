@@ -196,7 +196,6 @@ export default function App() {
           <div className="pt-8 border-t border-white/5 flex justify-between items-center">
             <div className="text-[10px] font-mono text-white/20 tracking-widest">© 2026 Z9nAI GmbH // Alle Rechte vorbehalten</div>
             <div className="flex gap-4">
-              <Globe className="w-4 h-4 text-white/20" />
               <Mail className="w-4 h-4 text-white/20" onClick={() => window.location.href = 'mailto:hallo@z9n.ai'} />
             </div>
           </div>

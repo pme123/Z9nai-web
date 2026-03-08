@@ -19,4 +19,9 @@ dich mit dieser Lösung zu begeistern.
 
 So garantieren wir professionellen Support, regelmässige Updates und spannende neue Funktionen. 
 
- 
+## System- & Solution Architektur
+
+Du bist nicht sicher ob eine BPMN Engine für dich passt oder ob es einfach ein unnötiger Overhead ist? 
+
+Gerne helfen wir dir, eine passende Systemlandschaft zu finden, welche die heutigen Verhältnisse 
+und die zukünftigen Anforderungen unter einen Hut bringen.
