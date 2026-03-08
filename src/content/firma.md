@@ -12,12 +12,13 @@ welche ein Projekt von A-Z erfolgreich durchziehen können.
 Im Moment bin ich noch alleine unterwegs. 
 So wenn du unsere Konzepte spannend findest, freuen wir uns auf einen Austausch.
 
-**Pascal Mengelt** – Gründer & Software-Architekt
+**Pascal Mengelt** – Gründer & Software Ingenieur
 
-![Pascal Mengelt](../images/portrait_hobby.png)
+![Pascal Mengelt](../images/portrait.png "hover:portrait_hobby.png")
 
 
-Pascal bringt über 20 Jahre Erfahrung in Softwarearchitektur, Prozessorchestrierung und domänengetriebenem Design mit. Er ist Autor von _Orchescala_ und treibt die Vision von KI-gestützter Prozessautomatisierung voran.
+Pascal bringt über 20 Jahre Erfahrung in Software Engineering mit.
+architektur, Prozessorchestrierung und domänengetriebenem Design mit. Er ist Autor von _Orchescala_ und treibt die Vision von KI-gestützter Prozessautomatisierung voran.
 
 ---
 

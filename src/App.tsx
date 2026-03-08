@@ -7,6 +7,7 @@ import logoImage from './images/logo_white.png';
 import logoHase from './images/logo.png';
 import orchescalaIcon from './images/orchescala_icon.png';
 import portraitHobby from './images/portrait_hobby.png';
+import portrait from './images/portrait.png';
 import heroMd from './content/hero.md?raw';
 import konzepteMd from './content/konzepte.md?raw';
 import orchescalaMd from './content/orchescala.md?raw';
@@ -30,6 +31,22 @@ const Logo = ({ className = "w-8 h-8" }: { className?: string }) => {
 const imageMap: { [key: string]: string } = {
   'orchescala_icon.png': orchescalaIcon,
   'portrait_hobby.png': portraitHobby,
+  'portrait.png': portrait,
+};
+
+const HoverImage = ({ src, hoverSrc, alt, title }: { src: string; hoverSrc?: string; alt?: string; title?: string }) => {
+  const [hovered, setHovered] = React.useState(false);
+  return (
+    <img
+      src={hoverSrc && hovered ? hoverSrc : src}
+      alt={alt}
+      title={title}
+      className="max-w-full h-auto rounded-lg my-4 mx-auto block transition-all duration-200"
+      onMouseEnter={() => hoverSrc && setHovered(true)}
+      onMouseLeave={() => setHovered(false)}
+      style={hoverSrc ? { cursor: 'pointer' } : undefined}
+    />
+  );
 };
 
 const ContentSection = ({ id, index, label, content, alternate = false }: {
@@ -44,7 +61,19 @@ const ContentSection = ({ id, index, label, content, alternate = false }: {
       const src = props.src as string;
       const filename = src.split('/').pop() || src;
       const mappedSrc = imageMap[filename] || src;
-      return <img {...props} src={mappedSrc} className={`max-w-full h-auto rounded-lg my-4${' mx-auto block'}`} />;
+
+      // Support optional hover image via title: "hover:hover_image.png" or "hover:https://..."
+      const rawTitle: string = props.title || '';
+      let hoverSrc: string | undefined;
+      let displayTitle: string | undefined;
+      if (rawTitle.startsWith('hover:')) {
+        const hoverFilename = rawTitle.slice('hover:'.length);
+        hoverSrc = imageMap[hoverFilename] || hoverFilename;
+      } else {
+        displayTitle = rawTitle || undefined;
+      }
+
+      return <HoverImage src={mappedSrc} hoverSrc={hoverSrc} alt={props.alt} title={displayTitle} />;
     }
   };
 
