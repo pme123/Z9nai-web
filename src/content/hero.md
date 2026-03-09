@@ -1,6 +1,6 @@
 > KI verändert Software Engineering grundlegend.
 
-Was bleibt sind deine Domäne und Prozesse.
+Was bleibt sind deine Geschäfts-Modelle und -Prozesse.
 
 > Wir bringen dein Unternehmen ins digitale KI-Zeitalter.
 
