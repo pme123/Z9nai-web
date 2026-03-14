@@ -20,7 +20,7 @@ welche ein Projekt von A-Z erfolgreich durchziehen können.
 
 Gründer & Software Ingenieur
 
-![Pascal Mengelt](../images/portrait.png "hover:portrait_hobby.png")
+![Pascal Mengelt](../images/portrait.png)
 
 </div>
 
@@ -48,7 +48,7 @@ Sei es als Partner, als Teil von Z9nAI oder natürlich als Kunde._
 Interesse an einer Zusammenarbeit oder Fragen zu unseren Services? 
 Wir freuen uns auf deine Nachricht.
 
-[hallo@z9n.ai](mailto:hallo@z9n.ai)
+[hallo@z9nai.ch](mailto:hallo@z9nai.ch)
 
 
 ### Name
