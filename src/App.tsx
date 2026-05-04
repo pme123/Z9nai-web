@@ -11,11 +11,34 @@ import portraitHobby from './images/portrait_hobby.png';
 import portrait from './images/portrait.png';
 import servicesImg from './images/services.png';
 import heroMd from './content/hero.md?raw';
+import datenschutzMd from './content/datenschutz.md?raw';
 import konzepteMd from './content/konzepte.md?raw';
 import orchescalaMd from './content/orchescala.md?raw';
 import servicesMd from './content/services.md?raw';
 import firmaMd from './content/firma.md?raw';
 import cvPdf from './files/cv_pascal.mengelt.pdf?url';
+
+const DatenschutzModal = ({ onClose }: { onClose: () => void }) => (
+  <div
+    className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/70 backdrop-blur-sm"
+    onClick={onClose}
+  >
+    <div
+      className="relative max-w-2xl w-full max-h-[80vh] overflow-y-auto rounded-2xl border border-white/10 bg-[#191a1c] p-8 shadow-2xl"
+      onClick={e => e.stopPropagation()}
+    >
+      <button
+        onClick={onClose}
+        className="absolute top-4 right-4 text-white/40 hover:text-white transition-colors font-mono text-xs tracking-widest"
+      >
+        [ESC]
+      </button>
+      <article className="markdown-body prose prose-invert max-w-none">
+        <Markdown remarkPlugins={[remarkGfm]} rehypePlugins={[rehypeRaw]}>{datenschutzMd}</Markdown>
+      </article>
+    </div>
+  </div>
+);
 
 const Logo = ({ className = "w-8 h-8" }: { className?: string }) => {
   const [hovered, setHovered] = React.useState(false);
@@ -186,8 +209,17 @@ const Hero = () => (
 );
 
 export default function App() {
+  const [datenschutzOpen, setDatenschutzOpen] = React.useState(false);
+
+  React.useEffect(() => {
+    const handler = (e: KeyboardEvent) => { if (e.key === 'Escape') setDatenschutzOpen(false); };
+    window.addEventListener('keydown', handler);
+    return () => window.removeEventListener('keydown', handler);
+  }, []);
+
   return (
     <div className="min-h-screen bg-[#191a1c] text-white font-sans selection:bg-white selection:text-black">
+      {datenschutzOpen && <DatenschutzModal onClose={() => setDatenschutzOpen(false)} />}
       <Header />
 
       <main>
@@ -204,8 +236,14 @@ export default function App() {
 
           <div className="pt-8 border-t border-white/5 flex justify-between items-center">
             <div className="text-[10px] font-mono text-white/20 tracking-widest">© 2026 z9nai GmbH // Alle Rechte vorbehalten</div>
-            <div className="flex gap-4">
-              <Mail className="w-4 h-4 text-white/20" onClick={() => window.location.href = 'mailto:pascal.mengelt@z9n.ai'} />
+            <div className="flex items-center gap-4">
+              <button
+                onClick={() => setDatenschutzOpen(true)}
+                className="text-[10px] font-mono text-white/20 hover:text-white/50 transition-colors tracking-widest uppercase"
+              >
+                Datenschutz
+              </button>
+              <Mail className="w-4 h-4 text-white/20 cursor-pointer" onClick={() => window.location.href = 'mailto:pascal.mengelt@z9n.ai'} />
             </div>
           </div>
         </div>

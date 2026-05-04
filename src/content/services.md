@@ -2,7 +2,7 @@
 ![services](services.png)
 
 ## Kennenlernen
-Erzähl von deinen Plänen und lerne mich und meine Arbeitsweise unverbindlich kennen.
+Erzähl von deinen Plänen und lerne mich und meine Methoden unverbindlich kennen.
 Gerne komme ich bei dir vorbei oder wir tauschen uns remote aus.
 
 ## Workshops
@@ -11,7 +11,7 @@ Du bist interessiert, aber möchtest einen tieferen Einblick erhalten?
 Kein Problem, hier ein paar Ideen für gemeinsame Workshops:
 - Ich zeige weitere Aspekte in Demos und stehe Rede und Antwort.
 - Wir schauen zusammen deine Prozesslandschaft an oder analysieren Prozesse.
-- Oder wir bauen zusammen einen PoC und du lernst mich sowie meine Tools und Arbeitsweise direkt kennen.
+- Oder wir bauen zusammen einen PoC und du lernst mich sowie meine Tools und Methoden direkt kennen.
 
 ## Mandat
 _**Miete mich!**_
