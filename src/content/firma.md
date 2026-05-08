@@ -29,7 +29,7 @@ und gemeinsam mit mir z9nai weiterentwickeln möchten.
 
 **Pascal Mengelt**
 
-Gründer & Software/AI Ingenieur
+Gründer & Software Ingenieur
 
 ![Pascal Mengelt](../images/portrait.png)
 

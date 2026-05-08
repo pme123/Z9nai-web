@@ -1,6 +1,6 @@
 ## Datenschutzerklärung
 
-**z9nai GmbH** – Pascal Mengelt  
+**z9nai GmbH**  
 Schweiz  
 [pascal.mengelt@z9nai.ch](mailto:pascal.mengelt@z9nai.ch)
 
@@ -13,9 +13,13 @@ Es werden keine persönlichen Daten durch Drittdienste erhoben oder weitergegebe
 
 ---
 
-### Server-Logs
+### Hosting – GitHub Pages
 
-Beim Aufruf dieser Website speichert der Hosting-Anbieter technische Zugriffsdaten in Server-Logs (z. B. IP-Adresse, Zeitstempel, aufgerufene Seite). Diese Daten werden ausschliesslich zur Sicherstellung des Betriebs verwendet und nicht mit anderen Daten verknüpft.
+Diese Website wird über **GitHub Pages** gehostet (GitHub Inc., 88 Colin P. Kelly Jr. St., San Francisco, CA 94107, USA).
+
+Beim Aufruf der Website erhebt GitHub automatisch technische Zugriffsdaten (z. B. IP-Adresse, Zeitstempel, aufgerufene Seite). Diese Daten werden von GitHub verarbeitet und können auf Servern in den USA gespeichert werden.
+
+Die Datenbearbeitung durch GitHub erfolgt gemäss der [GitHub Privacy Policy](https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement). Für Übermittlungen in die USA stützt sich GitHub auf die Standardvertragsklauseln der EU-Kommission (SCCs).
 
 ---
 
