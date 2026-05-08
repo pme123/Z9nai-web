@@ -36,6 +36,16 @@ Du bist nicht sicher, ob eine BPMN Engine für dich passt oder ob sie einfach nu
 Gerne helfe ich dir, eine passende Systemlandschaft zu finden, welche die heutige Architektur
 und die zukünftigen Anforderungen unter einen Hut bringt.
 
+### Showcases & Experimente
+
+Du hast eine Idee, weisst aber nicht, ob sie umsetzbar ist oder wie sie in der Praxis aussieht?
+
+Ein _Proof of Concept_ hilft meist mehr als lange Diskussionen.
+Gerne helfe ich dir, deine Visionen konkret zu machen – zum Beispiel mit:
+- Interaktiven Demos und Prototypen
+- Technischen Experimenten und Machbarkeitsstudien
+- Gemeinsam entwickelten PoCs direkt in deinem Kontext
+
 ## Orchescala Support
 
 Ich stehe hinter _Orchescala_ und freue mich,
