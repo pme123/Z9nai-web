@@ -4,13 +4,13 @@ _Alle Preise in CHF, exkl. MWST._
 
 ## Kennenlernen / Workshops
 
-| Format            | Dauer  | Preis     |
-|-------------------|--------|-----------|
-| Kennenlernen      | bis 2h | kostenlos |
-| Halbtags-Workshop | 4h     | CHF 1'200 |
-| Ganztags-Workshop | 8h     | CHF 2'000 |
+| Format                | Dauer  | Preis     |
+|-----------------------|--------|-----------|
+| **Kennenlernen**      | bis 2h | kostenlos |
+| **Halbtags-Workshop** | 4h     | CHF 1'200 |
+| **Ganztags-Workshop** | 8h     | CHF 2'000 |
 
-> Vorbereitung & Reisekosten sind im Preis enthalten.
+> Vorbereitung & allfällige Reisekosten sind im Preis enthalten.
 
 ---
 
@@ -63,7 +63,9 @@ biete ich die folgenden Pakete an.
 ## Infrastruktur & Werkzeuge
 
 Ich verfüge über modernste Arbeitsmittel, um maximale Effizienz und Qualität zu garantieren:
-- **Hardware**: High-End MacBook Pro M5 Max mit 128 GB RAM – leistungsstark genug, um KI-Modelle lokal auszuführen. Sensible Daten verlassen damit nie das Gerät.
+
+- **Hardware**: High-End MacBook Pro M5 Max mit 128 GB RAM – leistungsstark genug, um KI-Modelle lokal auszuführen.
+  Sensible Daten verlassen damit nie das Gerät.
 - **Software**: Breites, stets aktuelles Tool-Set – flexibel eingesetzt, je nach Aufgabe und Kontext.
 - **KI-Unterstützung**: Einsatz führender KI-Assistenzsysteme zur Beschleunigung von Analyse, Coding und Dokumentation.
 
