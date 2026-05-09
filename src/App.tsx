@@ -19,13 +19,13 @@ import preiseMd from './content/preise.md?raw';
 import firmaMd from './content/firma.md?raw';
 import cvPdf from './files/cv_pascal.mengelt.pdf?url';
 
-const DatenschutzModal = ({ onClose }: { onClose: () => void }) => (
+const Modal = ({ onClose, children, wide = false }: { onClose: () => void; children: React.ReactNode; wide?: boolean }) => (
   <div
     className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/70 backdrop-blur-sm"
     onClick={onClose}
   >
     <div
-      className="relative max-w-2xl w-full max-h-[80vh] overflow-y-auto rounded-2xl border border-white/10 bg-[#191a1c] p-8 shadow-2xl"
+      className={`relative ${wide ? 'max-w-4xl' : 'max-w-2xl'} w-full max-h-[80vh] overflow-y-auto rounded-2xl border border-white/10 bg-[#191a1c] p-8 shadow-2xl`}
       onClick={e => e.stopPropagation()}
     >
       <button
@@ -35,10 +35,22 @@ const DatenschutzModal = ({ onClose }: { onClose: () => void }) => (
         [ESC]
       </button>
       <article className="markdown-body prose prose-invert max-w-none">
-        <Markdown remarkPlugins={[remarkGfm]} rehypePlugins={[rehypeRaw]}>{datenschutzMd}</Markdown>
+        {children}
       </article>
     </div>
   </div>
+);
+
+const DatenschutzModal = ({ onClose }: { onClose: () => void }) => (
+  <Modal onClose={onClose}>
+    <Markdown remarkPlugins={[remarkGfm]} rehypePlugins={[rehypeRaw]}>{datenschutzMd}</Markdown>
+  </Modal>
+);
+
+const KonditionenModal = ({ onClose }: { onClose: () => void }) => (
+  <Modal onClose={onClose} wide>
+    <Markdown remarkPlugins={[remarkGfm]} rehypePlugins={[rehypeRaw]}>{preiseMd}</Markdown>
+  </Modal>
 );
 
 const Logo = ({ className = "w-8 h-8" }: { className?: string }) => {
@@ -221,28 +233,40 @@ const PreiseHeader = () => (
   </header>
 );
 
+const PageFooter = ({ onDatenschutz, onKonditionen }: { onDatenschutz: () => void; onKonditionen?: () => void }) => (
+  <footer className="py-16 px-6 border-t border-white/10">
+    <div className="max-w-5xl mx-auto">
+      <div className="pt-8 border-t border-white/5 flex justify-between items-center">
+        <div className="text-[10px] font-mono text-white/20 tracking-widest">© 2026 z9nai GmbH // Alle Rechte vorbehalten</div>
+        <div className="flex items-center gap-4">
+          {onKonditionen && (
+            <button
+              onClick={onKonditionen}
+              className="text-[10px] font-mono text-white/20 hover:text-white/50 transition-colors tracking-widest uppercase"
+            >
+              Konditionen
+            </button>
+          )}
+          <button
+            onClick={onDatenschutz}
+            className="text-[10px] font-mono text-white/20 hover:text-white/50 transition-colors tracking-widest uppercase"
+          >
+            Datenschutz
+          </button>
+          <Mail className="w-4 h-4 text-white/20 cursor-pointer" onClick={() => window.location.href = 'mailto:pascal.mengelt@z9n.ai'} />
+        </div>
+      </div>
+    </div>
+  </footer>
+);
+
 const PreisePage = ({ onDatenschutz }: { onDatenschutz: () => void }) => (
   <>
     <PreiseHeader />
     <main>
-      <ContentSection id="preise" index="00" label="Preise" content={preiseMd} />
+      <ContentSection id="preise" index="00" label="Konditionen" content={preiseMd} />
     </main>
-    <footer className="py-16 px-6 border-t border-white/10">
-      <div className="max-w-5xl mx-auto">
-        <div className="pt-8 border-t border-white/5 flex justify-between items-center">
-          <div className="text-[10px] font-mono text-white/20 tracking-widest">© 2026 z9nai GmbH // Alle Rechte vorbehalten</div>
-          <div className="flex items-center gap-4">
-            <button
-              onClick={onDatenschutz}
-              className="text-[10px] font-mono text-white/20 hover:text-white/50 transition-colors tracking-widest uppercase"
-            >
-              Datenschutz
-            </button>
-            <Mail className="w-4 h-4 text-white/20 cursor-pointer" onClick={() => window.location.href = 'mailto:pascal.mengelt@z9n.ai'} />
-          </div>
-        </div>
-      </div>
-    </footer>
+    <PageFooter onDatenschutz={onDatenschutz} />
   </>
 );
 
@@ -255,10 +279,13 @@ const isPreiseRoute = () => {
 
 export default function App() {
   const [datenschutzOpen, setDatenschutzOpen] = React.useState(false);
+  const [konditionenOpen, setKonditionenOpen] = React.useState(false);
   const [showPreise, setShowPreise] = React.useState(isPreiseRoute());
 
   React.useEffect(() => {
-    const handler = (e: KeyboardEvent) => { if (e.key === 'Escape') setDatenschutzOpen(false); };
+    const handler = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') { setDatenschutzOpen(false); setKonditionenOpen(false); }
+    };
     window.addEventListener('keydown', handler);
     const onNav = () => setShowPreise(isPreiseRoute());
     window.addEventListener('popstate', onNav);
@@ -273,6 +300,7 @@ export default function App() {
   return (
     <div className="min-h-screen bg-[#191a1c] text-white font-sans selection:bg-white selection:text-black">
       {datenschutzOpen && <DatenschutzModal onClose={() => setDatenschutzOpen(false)} />}
+      {konditionenOpen && <KonditionenModal onClose={() => setKonditionenOpen(false)} />}
       {showPreise ? (
         <PreisePage onDatenschutz={() => setDatenschutzOpen(true)} />
       ) : (
@@ -285,22 +313,10 @@ export default function App() {
             <ContentSection id="services"    index="03" label="Services"    content={servicesMd} alternate />
             <ContentSection id="contact"     index="04" label="Firma"     content={firmaMd.replace('/cv_pascal.mengelt.pdf', cvPdf)} />
           </main>
-          <footer className="py-16 px-6 border-t border-white/10">
-            <div className="max-w-5xl mx-auto">
-              <div className="pt-8 border-t border-white/5 flex justify-between items-center">
-                <div className="text-[10px] font-mono text-white/20 tracking-widest">© 2026 z9nai GmbH // Alle Rechte vorbehalten</div>
-                <div className="flex items-center gap-4">
-                  <button
-                    onClick={() => setDatenschutzOpen(true)}
-                    className="text-[10px] font-mono text-white/20 hover:text-white/50 transition-colors tracking-widest uppercase"
-                  >
-                    Datenschutz
-                  </button>
-                  <Mail className="w-4 h-4 text-white/20 cursor-pointer" onClick={() => window.location.href = 'mailto:pascal.mengelt@z9n.ai'} />
-                </div>
-              </div>
-            </div>
-          </footer>
+          <PageFooter
+            onDatenschutz={() => setDatenschutzOpen(true)}
+            onKonditionen={() => setKonditionenOpen(true)}
+          />
         </>
       )}
 
