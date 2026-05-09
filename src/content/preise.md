@@ -18,11 +18,11 @@ _Alle Preise in CHF, exkl. MWST._
 
 Drei Stufen je nach Projektumfang und Planbarkeit:
 
-| Stufe           | Umfang                             | Stundenansatz |
-|-----------------|------------------------------------|---------------|
-| **Flexibel**    | Nach Aufwand, keine Mindestabnahme | CHF 220 / h   |
-| **Committed M** | Ab 200h innerhalb von 3 Monaten    | CHF 200 / h   |
-| **Committed L** | Ab 500h innerhalb von 6 Monaten    | CHF 180 / h   |
+| Stufe        | Umfang                             | Stundenansatz |
+|--------------|------------------------------------|---------------|
+| **Flexibel** | Nach Aufwand, keine Mindestabnahme | CHF 220 / h   |
+| **Quartal**  | Ab 200h innerhalb von 3 Monaten    | CHF 200 / h   |
+| **Halbjahr** | Ab 500h innerhalb von 6 Monaten    | CHF 180 / h   |
 
 > Bei den Committed-Stufen gilt ein Mindestvolumen. Nicht bezogene Stunden verfallen am Ende der Periode.
 
