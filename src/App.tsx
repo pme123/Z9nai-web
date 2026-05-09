@@ -15,6 +15,7 @@ import datenschutzMd from './content/datenschutz.md?raw';
 import konzepteMd from './content/konzepte.md?raw';
 import orchescalaMd from './content/orchescala.md?raw';
 import servicesMd from './content/services.md?raw';
+import preiseMd from './content/preise.md?raw';
 import firmaMd from './content/firma.md?raw';
 import cvPdf from './files/cv_pascal.mengelt.pdf?url';
 
@@ -208,46 +209,100 @@ const Hero = () => (
   </section>
 );
 
+const PreiseHeader = () => (
+  <header className="border-b border-white/10 bg-[#191a1c]/90 backdrop-blur-md sticky top-0 z-50">
+    <div className="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
+      <div className="flex items-center gap-3">
+        <Logo className="w-10 h-10" />
+        <span className="font-mono font-bold text-xl tracking-tighter text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-violet-500">z9nai GmbH</span>
+      </div>
+      <div className="text-[10px] font-mono uppercase tracking-[0.3em] text-white/30">vertraulich</div>
+    </div>
+  </header>
+);
+
+const PreisePage = ({ onDatenschutz }: { onDatenschutz: () => void }) => (
+  <>
+    <PreiseHeader />
+    <main>
+      <ContentSection id="preise" index="00" label="Preise" content={preiseMd} />
+    </main>
+    <footer className="py-16 px-6 border-t border-white/10">
+      <div className="max-w-5xl mx-auto">
+        <div className="pt-8 border-t border-white/5 flex justify-between items-center">
+          <div className="text-[10px] font-mono text-white/20 tracking-widest">© 2026 z9nai GmbH // Alle Rechte vorbehalten</div>
+          <div className="flex items-center gap-4">
+            <button
+              onClick={onDatenschutz}
+              className="text-[10px] font-mono text-white/20 hover:text-white/50 transition-colors tracking-widest uppercase"
+            >
+              Datenschutz
+            </button>
+            <Mail className="w-4 h-4 text-white/20 cursor-pointer" onClick={() => window.location.href = 'mailto:pascal.mengelt@z9n.ai'} />
+          </div>
+        </div>
+      </div>
+    </footer>
+  </>
+);
+
+const isPreiseRoute = () => {
+  if (typeof window === 'undefined') return false;
+  const path = window.location.pathname.replace(/\/+$/, '');
+  const hash = window.location.hash.replace(/^#\/?/, '').replace(/\/+$/, '');
+  return path === '/preise' || hash === 'preise';
+};
+
 export default function App() {
   const [datenschutzOpen, setDatenschutzOpen] = React.useState(false);
+  const [showPreise, setShowPreise] = React.useState(isPreiseRoute());
 
   React.useEffect(() => {
     const handler = (e: KeyboardEvent) => { if (e.key === 'Escape') setDatenschutzOpen(false); };
     window.addEventListener('keydown', handler);
-    return () => window.removeEventListener('keydown', handler);
+    const onNav = () => setShowPreise(isPreiseRoute());
+    window.addEventListener('popstate', onNav);
+    window.addEventListener('hashchange', onNav);
+    return () => {
+      window.removeEventListener('keydown', handler);
+      window.removeEventListener('popstate', onNav);
+      window.removeEventListener('hashchange', onNav);
+    };
   }, []);
 
   return (
     <div className="min-h-screen bg-[#191a1c] text-white font-sans selection:bg-white selection:text-black">
       {datenschutzOpen && <DatenschutzModal onClose={() => setDatenschutzOpen(false)} />}
-      <Header />
-
-      <main>
-        <Hero />
-        <ContentSection id="konzepte" index="01" label="Konzepte" content={konzepteMd} />
-        <ContentSection id="orchescala"  index="02" label="Orchescala"  content={orchescalaMd} />
-        <ContentSection id="services"    index="03" label="Services"    content={servicesMd} alternate />
-        <ContentSection id="contact"     index="04" label="Firma"     content={firmaMd.replace('/cv_pascal.mengelt.pdf', cvPdf)} />
-      </main>
-
-      <footer className="py-16 px-6 border-t border-white/10">
-        <div className="max-w-5xl mx-auto">
-
-
-          <div className="pt-8 border-t border-white/5 flex justify-between items-center">
-            <div className="text-[10px] font-mono text-white/20 tracking-widest">© 2026 z9nai GmbH // Alle Rechte vorbehalten</div>
-            <div className="flex items-center gap-4">
-              <button
-                onClick={() => setDatenschutzOpen(true)}
-                className="text-[10px] font-mono text-white/20 hover:text-white/50 transition-colors tracking-widest uppercase"
-              >
-                Datenschutz
-              </button>
-              <Mail className="w-4 h-4 text-white/20 cursor-pointer" onClick={() => window.location.href = 'mailto:pascal.mengelt@z9n.ai'} />
+      {showPreise ? (
+        <PreisePage onDatenschutz={() => setDatenschutzOpen(true)} />
+      ) : (
+        <>
+          <Header />
+          <main>
+            <Hero />
+            <ContentSection id="konzepte" index="01" label="Konzepte" content={konzepteMd} />
+            <ContentSection id="orchescala"  index="02" label="Orchescala"  content={orchescalaMd} />
+            <ContentSection id="services"    index="03" label="Services"    content={servicesMd} alternate />
+            <ContentSection id="contact"     index="04" label="Firma"     content={firmaMd.replace('/cv_pascal.mengelt.pdf', cvPdf)} />
+          </main>
+          <footer className="py-16 px-6 border-t border-white/10">
+            <div className="max-w-5xl mx-auto">
+              <div className="pt-8 border-t border-white/5 flex justify-between items-center">
+                <div className="text-[10px] font-mono text-white/20 tracking-widest">© 2026 z9nai GmbH // Alle Rechte vorbehalten</div>
+                <div className="flex items-center gap-4">
+                  <button
+                    onClick={() => setDatenschutzOpen(true)}
+                    className="text-[10px] font-mono text-white/20 hover:text-white/50 transition-colors tracking-widest uppercase"
+                  >
+                    Datenschutz
+                  </button>
+                  <Mail className="w-4 h-4 text-white/20 cursor-pointer" onClick={() => window.location.href = 'mailto:pascal.mengelt@z9n.ai'} />
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
-      </footer>
+          </footer>
+        </>
+      )}
 
       <style dangerouslySetInnerHTML={{ __html: `
         .markdown-body h1 { font-size: 2.25rem; font-weight: 800; margin-bottom: 1.5rem; color: white; letter-spacing: -0.025em; }
@@ -260,6 +315,13 @@ export default function App() {
         .markdown-body blockquote p { color: rgba(255,255,255,0.85); margin-bottom: 0; }
         .markdown-body a { color: white; text-decoration: underline; text-underline-offset: 4px; }
         .markdown-body a:hover { color: rgba(255,255,255,0.8); }
+        .markdown-body table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; font-size: 0.8rem; }
+        .markdown-body thead tr { border-bottom: 1px solid rgba(255,255,255,0.2); }
+        .markdown-body th { text-align: left; padding: 0.6rem 1rem; color: rgba(255,255,255,0.5); font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; font-size: 0.7rem; }
+        .markdown-body td { padding: 0.65rem 1rem; color: rgba(255,255,255,0.7); border-bottom: 1px solid rgba(255,255,255,0.05); }
+        .markdown-body tbody tr:hover td { background: rgba(255,255,255,0.03); }
+        .markdown-body td strong { color: white; font-weight: 600; }
+        .markdown-body hr { border: none; border-top: 1px solid rgba(255,255,255,0.08); margin: 2rem 0; }
       `}} />
     </div>
   );

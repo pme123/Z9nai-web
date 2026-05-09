@@ -11,7 +11,7 @@ Du bist interessiert, aber möchtest einen tieferen Einblick erhalten?
 Kein Problem, hier ein paar Ideen für gemeinsame Workshops:
 - Ich zeige weitere Aspekte in Demos und stehe Rede und Antwort.
 - Wir schauen zusammen deine Prozesslandschaft an oder analysieren Prozesse.
-- Oder wir bauen zusammen einen PoC und du lernst mich sowie meine Tools und Methoden direkt kennen.
+- Oder ich zeige direkt an einem Beispiel, wie wir zusammen Prozesse umsetzen können.
 
 ## Mandat
 _**Miete mich!**_
@@ -41,10 +41,10 @@ und die zukünftigen Anforderungen unter einen Hut bringt.
 Du hast eine Idee, weisst aber nicht, ob sie umsetzbar ist oder wie sie in der Praxis aussieht?
 
 Ein _Proof of Concept_ hilft meist mehr als lange Diskussionen.
-Gerne helfe ich dir, deine Visionen konkret zu machen – zum Beispiel mit:
-- Interaktiven Demos und Prototypen
-- Technischen Experimenten und Machbarkeitsstudien
-- Gemeinsam entwickelten PoCs direkt in deinem Kontext
+Gerne helfe ich dir, deine Visionen konkret zu machen:
+- Interaktive Demos und Prototypen
+- Technische Experimente und Machbarkeitsstudien
+- Gemeinsam entwickelte PoCs direkt in deinem Kontext
 
 ## Orchescala Support
 
