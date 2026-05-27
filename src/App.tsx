@@ -12,6 +12,7 @@ import portrait from './images/portrait.png';
 import servicesImg from './images/services.png';
 import heroMd from './content/hero.md?raw';
 import datenschutzMd from './content/datenschutz.md?raw';
+import codeOfConductMd from './content/code-of-conduct.md?raw';
 import konzepteMd from './content/konzepte.md?raw';
 import orchescalaMd from './content/orchescala.md?raw';
 import servicesMd from './content/services.md?raw';
@@ -44,6 +45,12 @@ const Modal = ({ onClose, children, wide = false }: { onClose: () => void; child
 const DatenschutzModal = ({ onClose }: { onClose: () => void }) => (
   <Modal onClose={onClose}>
     <Markdown remarkPlugins={[remarkGfm]} rehypePlugins={[rehypeRaw]}>{datenschutzMd}</Markdown>
+  </Modal>
+);
+
+const CodeOfConductModal = ({ onClose }: { onClose: () => void }) => (
+  <Modal onClose={onClose}>
+    <Markdown remarkPlugins={[remarkGfm]} rehypePlugins={[rehypeRaw]}>{codeOfConductMd}</Markdown>
   </Modal>
 );
 
@@ -233,19 +240,22 @@ const PreiseHeader = () => (
   </header>
 );
 
-const PageFooter = ({ onDatenschutz, onKonditionen }: { onDatenschutz: () => void; onKonditionen?: () => void }) => (
+const PageFooter = ({ onDatenschutz, onCodeOfConduct, onKonditionen }: { onDatenschutz: () => void; onCodeOfConduct?: () => void; onKonditionen?: () => void }) => (
   <footer className="py-16 px-6 border-t border-white/10">
     <div className="max-w-5xl mx-auto">
       <div className="pt-8 border-t border-white/5 flex justify-between items-center">
         <div className="text-[10px] font-mono text-white/20 tracking-widest">© 2026 z9nai GmbH // Alle Rechte vorbehalten</div>
         <div className="flex items-center gap-4">
           {onKonditionen && (
-            <button
-              onClick={onKonditionen}
-              className="text-[10px] font-mono text-white/20 hover:text-white/50 transition-colors tracking-widest uppercase"
-            >
-              Konditionen
-            </button>
+            <>
+              <button
+                onClick={onKonditionen}
+                className="text-[10px] font-mono text-white/20 hover:text-white/50 transition-colors tracking-widest uppercase"
+              >
+                Konditionen
+              </button>
+              <span className="text-white/10 font-mono text-xs">//</span>
+            </>
           )}
           <button
             onClick={onDatenschutz}
@@ -253,6 +263,18 @@ const PageFooter = ({ onDatenschutz, onKonditionen }: { onDatenschutz: () => voi
           >
             Datenschutz
           </button>
+          {onCodeOfConduct && (
+            <>
+              <span className="text-white/10 font-mono text-xs">//</span>
+              <button
+                onClick={onCodeOfConduct}
+                className="text-[10px] font-mono text-white/20 hover:text-white/50 transition-colors tracking-widest uppercase"
+              >
+                Code of Conduct
+              </button>
+            </>
+          )}
+          <span className="text-white/10 font-mono text-xs">//</span>
           <Mail className="w-4 h-4 text-white/20 cursor-pointer" onClick={() => window.location.href = 'mailto:pascal.mengelt@z9n.ai'} />
         </div>
       </div>
@@ -270,6 +292,16 @@ const PreisePage = ({ onDatenschutz }: { onDatenschutz: () => void }) => (
   </>
 );
 
+const CodeOfConductPage = ({ onDatenschutz }: { onDatenschutz: () => void }) => (
+  <>
+    <PreiseHeader />
+    <main>
+      <ContentSection id="code-of-conduct" index="00" label="Code of Conduct" content={codeOfConductMd} />
+    </main>
+    <PageFooter onDatenschutz={onDatenschutz} />
+  </>
+);
+
 const isPreiseRoute = () => {
   if (typeof window === 'undefined') return false;
   const path = window.location.pathname.replace(/\/+$/, '');
@@ -277,17 +309,29 @@ const isPreiseRoute = () => {
   return path === '/preise' || hash === 'preise';
 };
 
+const isCodeOfConductRoute = () => {
+  if (typeof window === 'undefined') return false;
+  const path = window.location.pathname.replace(/\/+$/, '');
+  const hash = window.location.hash.replace(/^#\/?/, '').replace(/\/+$/, '');
+  return path === '/code-of-conduct' || hash === 'code-of-conduct';
+};
+
 export default function App() {
   const [datenschutzOpen, setDatenschutzOpen] = React.useState(false);
+  const [codeOfConductOpen, setCodeOfConductOpen] = React.useState(false);
   const [konditionenOpen, setKonditionenOpen] = React.useState(false);
   const [showPreise, setShowPreise] = React.useState(isPreiseRoute());
+  const [showCodeOfConduct, setShowCodeOfConduct] = React.useState(isCodeOfConductRoute());
 
   React.useEffect(() => {
     const handler = (e: KeyboardEvent) => {
-      if (e.key === 'Escape') { setDatenschutzOpen(false); setKonditionenOpen(false); }
+      if (e.key === 'Escape') { setDatenschutzOpen(false); setCodeOfConductOpen(false); setKonditionenOpen(false); }
     };
     window.addEventListener('keydown', handler);
-    const onNav = () => setShowPreise(isPreiseRoute());
+    const onNav = () => {
+      setShowPreise(isPreiseRoute());
+      setShowCodeOfConduct(isCodeOfConductRoute());
+    };
     window.addEventListener('popstate', onNav);
     window.addEventListener('hashchange', onNav);
     return () => {
@@ -300,9 +344,12 @@ export default function App() {
   return (
     <div className="min-h-screen bg-[#191a1c] text-white font-sans selection:bg-white selection:text-black">
       {datenschutzOpen && <DatenschutzModal onClose={() => setDatenschutzOpen(false)} />}
+      {codeOfConductOpen && <CodeOfConductModal onClose={() => setCodeOfConductOpen(false)} />}
       {konditionenOpen && <KonditionenModal onClose={() => setKonditionenOpen(false)} />}
       {showPreise ? (
         <PreisePage onDatenschutz={() => setDatenschutzOpen(true)} />
+      ) : showCodeOfConduct ? (
+        <CodeOfConductPage onDatenschutz={() => setDatenschutzOpen(true)} />
       ) : (
         <>
           <Header />
@@ -315,6 +362,7 @@ export default function App() {
           </main>
           <PageFooter
             onDatenschutz={() => setDatenschutzOpen(true)}
+            onCodeOfConduct={() => setCodeOfConductOpen(true)}
             onKonditionen={() => setKonditionenOpen(true)}
           />
         </>
